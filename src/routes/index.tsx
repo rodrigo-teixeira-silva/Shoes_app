@@ -3,8 +3,23 @@ import OneSignal, { NotificationReceivedEvent, OSNotification } from 'react-nati
 import { useTheme } from 'native-base';
 import { DefaultTheme, NavigationContainer } from '@react-navigation/native';
 import { Notification } from '../components/Notification';
+import * as Linking from 'expo-linking';
 
 import { AppRoutes } from './app.routes';
+
+const linking = {
+  prefixes:['com.rocketseat.iginiteshoes://',  'igniteshoesapp://', 'exp+igniteshoesapp://'],
+  config: {
+    screens: {
+      details: {
+        path: 'details/:productId',
+        parse: {
+          productId: (productId: String) => productId
+        }
+      }
+    }
+  }
+}
 
 export function Routes() {
   const [notification , setNotification] = useState<OSNotification>();
@@ -13,6 +28,13 @@ export function Routes() {
 
   const theme = DefaultTheme;
   theme.colors.background = colors.gray[700];
+
+  const deepLinking = Linking.createURL('details', {
+    queryParams:{
+      productId:'7'
+    }
+  });
+  console.log(deepLinking);
 
   useEffect(()=> {
     const unsubscrible = OneSignal.setNotificationWillShowInForegroundHandler((NotificationReceivedEvent: NotificationReceivedEvent ) => {
@@ -24,7 +46,7 @@ export function Routes() {
     },[]); 
     
   return (
-    <NavigationContainer theme={theme}>
+    <NavigationContainer theme={theme} linking={linking}>
       <AppRoutes />
 
       {
