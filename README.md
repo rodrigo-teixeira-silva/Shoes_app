@@ -11,7 +11,7 @@ Aplicação para controle de Loja virtual para compra de produtos on line permit
 
  **</>Codelink**.
 
-Aplicação utilizando framework react native na pratica, com login social com conta google, banco de dados em nuvem,
+Aplicação utilizando framework react native na pratica.
 
 
 ## Layout mobile
