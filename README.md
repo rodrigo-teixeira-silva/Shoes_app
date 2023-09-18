@@ -68,7 +68,7 @@ Pré-requisitos: npm
 
 Rodrigo Teixeira Silva
 
-<img style = "width:200px" src="https://github.com/rodrigo-teixeira-silva.png" alt="Imegem desenvolvedor" >
+<img style = "width:200px" src="https://github.com/rodrigo-teixeira-silva.png" alt="Imagem desenvolvedor" >
 
 ## [Linkedin](https://www.linkedin.com/in/rodrigo-teixeira-silva/)
 
