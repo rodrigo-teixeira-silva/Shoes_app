@@ -15,7 +15,9 @@ Aplicação utilizando framework react native na pratica.
 
 
 ## Layout mobile
-![Alt text](./assets/Imagem-2.gif.gif)
+
+<img src="./assets/Imagem-2.gif.gif" alt="Alt text" width="200px" height="400px" style="padding-right: 10px;">
+
 Aplicação feita na trilha ignite da Rocketseat
 
 # Tecnologias utilizadas
